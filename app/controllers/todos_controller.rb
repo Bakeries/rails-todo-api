@@ -42,5 +42,4 @@ module V1
       @todo = Todo.find(params[:id])
     end
   end
-
 end
