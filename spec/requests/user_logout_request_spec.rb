@@ -26,14 +26,13 @@ RSpec.describe 'Logout' do
     context 'When request is valid' do
       before {
         post '/auth/login',params: valid_credentials, headers: headers
-        get '/auth/logout', params: {Authorization: json['auth_token']}, headers: headers
       }
 
       it 'returns status code 200' do
         expect(json['message']).not_to be_nil
         RSpec.describe json['message'] do
           it { is_expected.to match("Invalid credentials") }
-          it { is_expected.not_to match("You have succesfully logged out...") }
+          it { is_expected.not_to match("You have successfully logged out") }
         end
       end
     end

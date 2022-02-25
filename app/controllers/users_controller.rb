@@ -10,8 +10,8 @@ class UsersController < ApplicationController
   end
 
   def logout
-    auth_token = nil
-    json_response(message: "You have successfully logged out", auth_token: auth_token)
+    auth_token = AuthenticateUser.new(auth_params[:username], auth_params[:password]).call
+    json_response(message: "You have successfully logged out")
   end
 
   private
