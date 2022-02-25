@@ -1,7 +1,5 @@
-require 'rails_helper'
-
-RSpec.describe "V2::Todos", type: :request do
-  describe "GET /index" do
-    pending "add some examples (or delete) #{__FILE__}"
+class V2::TodosController < ApplicationController
+  def index
+    json_response({ message: 'Hello there'})
   end
 end
