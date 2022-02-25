@@ -1,9 +1,9 @@
-class LogoutUser
+class UserLogout
   def initialize(token)
     @token = token
   end
 
-  def call()
+  def call
     if @token != nil
       { message: "Logged out.", status_code: '200'}.to_json
     else

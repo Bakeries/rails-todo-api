@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Logout' do
   # Authentication test suite
-  describe 'GET /auth/logout' do
+  describe 'POST /auth/logout' do
     # create test user
     let!(:user) { create(:user) }
     # set headers for authorization
